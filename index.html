@@ -143,6 +143,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import</li>
 
+<li>$:/config/RelinkOnRename</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -201,13 +203,11 @@ Error message and password prompt
 
 <li>Jira</li>
 
+<li>LBSLocal</li>
+
 <li>New Tiddler</li>
 
-<li>New Tiddler 1</li>
-
 <li>RSA: Chave Publica</li>
-
-<li>Servers</li>
 
 <li>VPN Maplink</li>
 
@@ -225,6 +225,9 @@ Error message and password prompt
 <div id="storeArea" style="display:none;">
 <div created="20200107184212180" modified="20200107184212180" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import">
 <pre>show</pre>
+</div>
+<div created="20200107193733651" modified="20200107193733651" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.21">
 <pre>{
@@ -9572,7 +9575,7 @@ Error message and password prompt
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200107193403205" list="GettingStarted [[New Tiddler 1]] Servers" modified="20200107193508987" title="$:/StoryList">
+<div created="20200107193403205" list="GettingStarted LBSLocal" modified="20200107193508987" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9778,22 +9781,19 @@ See the [[control panel|$:/ControlPanel]] for more options.
 <div created="20200107191401768" encrypted="{&quot;iv&quot;:&quot;ooVVTSNOSIq/enPMTCCp6Q==&quot;,&quot;v&quot;:1,&quot;iter&quot;:10000,&quot;ks&quot;:128,&quot;ts&quot;:64,&quot;mode&quot;:&quot;ccm&quot;,&quot;adata&quot;:&quot;&quot;,&quot;cipher&quot;:&quot;aes&quot;,&quot;salt&quot;:&quot;3pxj273i9po=&quot;,&quot;ct&quot;:&quot;0X4AvcWqJu8ic98BzMYDSrMwSEXShyPD1KUClZO/+Y+7keMt4uAUCiOXuZLXufJ1vN3FeShV3F8OKlGuC1k4xN/gwgIwpVTZ4fWsZvrcxcEL9l3G1PSBNb40vEw2yulu8DFNam2QosjA6ADOmICiWM6c48Eo6EK42JhTke/fVMgG3oWRtVh4M0QRmz/ywhPieE/XclUFRyzULZGl8esLLBjL4s/YpKtoo/PCnTmY5tuleFKFRc7vPGfUHl+8KX6vlnhxwANqg84uJTWgLgb3ql8ueLNlCIEWbO4MYQsp+yZijCCNsyN5OE+e02kVG/2ydvh0WS4QxTHIeSc3U6NQkkr5mleoNyA=&quot;}" modified="20200107191513608" tags="jira password link" title="Jira">
 <pre>!This is an encrypted Tiddler</pre>
 </div>
-<div created="20200107140811630" modified="20200107141236482" tags="" title="New Tiddler">
-<pre>[list[password]]</pre>
-</div>
-<div created="20200107193502100" modified="20200107193553004" tags="" title="New Tiddler 1">
-<pre>[list[$:/tag:server]]</pre>
-</div>
-<div created="20200107144155381" encrypted="{&quot;iv&quot;:&quot;YPNhpJ0jYfbLbrQMq+9CRQ==&quot;,&quot;v&quot;:1,&quot;iter&quot;:10000,&quot;ks&quot;:128,&quot;ts&quot;:64,&quot;mode&quot;:&quot;ccm&quot;,&quot;adata&quot;:&quot;&quot;,&quot;cipher&quot;:&quot;aes&quot;,&quot;salt&quot;:&quot;3pxj273i9po=&quot;,&quot;ct&quot;:&quot;fbmbKYP0XByixoFqrPAS2p00BfeRci14mHQgAEHw+aSm8BrvWPbT6WYzA0g50lRWxXZriam0j52+ulngFY7ffe88fQ/YZxAxWq+9QtcrS/253b3ZAgW2iTodg+1giU5BUGTkfJ/B9yHF/mta7DcFLjFznri5E9/M86cimv19rJRwafSRmxgbVwYd4zsfoCaZebxNf9kSteE0zyMr6wLsPHxP5Yi/8boAsME3x9aDvPoBhful8BdpEL1oTmP128PUVbYKWWlldT/f55Sl9mSUembgUTpQ6oxqEsdVRs42/GFDxBC/FaLAHXCHqG3fLIx2F6JVVQeutRNGIwNkydu4OZ52PJYYY678sY4Rvw5tT8lT7BvVz6oWE7Oq+zLvBYaygBfoMN7ZmtfWS4ISvrDR/edGX5wViRg1i/pXatUU5APaK63gDASQvhJXbkMj7aCEolM806jeh+LbJneCNVQXVMehngbzXNwfFdHid+35OtFY6G8vm6d9TJs7G9ms/gE9unD//Dp2OJxnvgKCcTBH/OY95kKqIwVlCeDk31aEkCVO4hA1aY3Te30n6t6J87WclnA4GIvgh7etDlQFtQYTbfXs5TqOyenFTyColUy/JyG24/XwjadCLe4DeTf753d7b3G3DuBI6Ja5WhhatLPcYZeM/ZYk4mWR6rmaWroeZIDF0cjRlHNsVVZiYCrSbNHoiWc4klrIYrpYVmJGj09m74paL8tvvKtpBGWBOS0L9BS38JAoFSCyZYUUU/XiT3+o9qGK8LbpO7SnoDMVoHyYwNzfYjHfZYPOgqv0KNrhBr6DoMWgG4RzqNhrXEPN2mogvqyFZE/gTaLJQnEBaryV3swDJ63ZH01D6XIGD57YEjz4DOeK0JDA/Lo5y63q/5KcYZniSFFYXFkbHJo7BpXiIehBJrxhnVfu3t85hTQG8N8J5wcX36NYAg==&quot;}" modified="20200107144219901" tags="" title="RSA: Chave Publica">
-<pre>!This is an encrypted Tiddler</pre>
-</div>
-<div created="20200107152039917" modified="20200107152459759" tags="ip server" title="Servers">
+<div created="20200107152039917" modified="20200107193736896" tags="ip server" title="LBSLocal">
 <pre>|!Server|!IP|
 |LSBLocal|172.16.5.39|
 
 Pubkey:
 
 {{RSA: Chave Publica}}</pre>
+</div>
+<div created="20200107140811630" modified="20200107141236482" tags="" title="New Tiddler">
+<pre>[list[password]]</pre>
+</div>
+<div created="20200107144155381" encrypted="{&quot;iv&quot;:&quot;YPNhpJ0jYfbLbrQMq+9CRQ==&quot;,&quot;v&quot;:1,&quot;iter&quot;:10000,&quot;ks&quot;:128,&quot;ts&quot;:64,&quot;mode&quot;:&quot;ccm&quot;,&quot;adata&quot;:&quot;&quot;,&quot;cipher&quot;:&quot;aes&quot;,&quot;salt&quot;:&quot;3pxj273i9po=&quot;,&quot;ct&quot;:&quot;fbmbKYP0XByixoFqrPAS2p00BfeRci14mHQgAEHw+aSm8BrvWPbT6WYzA0g50lRWxXZriam0j52+ulngFY7ffe88fQ/YZxAxWq+9QtcrS/253b3ZAgW2iTodg+1giU5BUGTkfJ/B9yHF/mta7DcFLjFznri5E9/M86cimv19rJRwafSRmxgbVwYd4zsfoCaZebxNf9kSteE0zyMr6wLsPHxP5Yi/8boAsME3x9aDvPoBhful8BdpEL1oTmP128PUVbYKWWlldT/f55Sl9mSUembgUTpQ6oxqEsdVRs42/GFDxBC/FaLAHXCHqG3fLIx2F6JVVQeutRNGIwNkydu4OZ52PJYYY678sY4Rvw5tT8lT7BvVz6oWE7Oq+zLvBYaygBfoMN7ZmtfWS4ISvrDR/edGX5wViRg1i/pXatUU5APaK63gDASQvhJXbkMj7aCEolM806jeh+LbJneCNVQXVMehngbzXNwfFdHid+35OtFY6G8vm6d9TJs7G9ms/gE9unD//Dp2OJxnvgKCcTBH/OY95kKqIwVlCeDk31aEkCVO4hA1aY3Te30n6t6J87WclnA4GIvgh7etDlQFtQYTbfXs5TqOyenFTyColUy/JyG24/XwjadCLe4DeTf753d7b3G3DuBI6Ja5WhhatLPcYZeM/ZYk4mWR6rmaWroeZIDF0cjRlHNsVVZiYCrSbNHoiWc4klrIYrpYVmJGj09m74paL8tvvKtpBGWBOS0L9BS38JAoFSCyZYUUU/XiT3+o9qGK8LbpO7SnoDMVoHyYwNzfYjHfZYPOgqv0KNrhBr6DoMWgG4RzqNhrXEPN2mogvqyFZE/gTaLJQnEBaryV3swDJ63ZH01D6XIGD57YEjz4DOeK0JDA/Lo5y63q/5KcYZniSFFYXFkbHJo7BpXiIehBJrxhnVfu3t85hTQG8N8J5wcX36NYAg==&quot;}" modified="20200107144219901" tags="" title="RSA: Chave Publica">
+<pre>!This is an encrypted Tiddler</pre>
 </div>
 <div created="20200107184225015" modified="20200107184834351" tags="password link" title="VPN Maplink">
 <pre>[[vpn.maplink.global]]
