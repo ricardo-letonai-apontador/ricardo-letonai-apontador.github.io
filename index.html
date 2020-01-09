@@ -211,6 +211,8 @@ Error message and password prompt
 
 <li>Servers</li>
 
+<li>stat</li>
+
 <li>VPN Maplink</li>
 
 <li>Wifi: MaplinkGlobal</li>
@@ -9439,7 +9441,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Limpeza de logs e arquivos antigos]]</pre>
+# [[stat]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9574,7 +9576,7 @@ Error message and password prompt
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200108202807171" list="[[Limpeza de logs e arquivos antigos]] [[Limpeza de logs e arquivos antigos (Windows)]]" modified="20200109185332258" title="$:/StoryList">
+<div created="20200108202807171" list="$:/Import [[Limpeza de logs e arquivos antigos]] [[Limpeza de logs e arquivos antigos (Windows)]]" modified="20200109185332258" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9924,6 +9926,37 @@ exit
 Pubkey:
 
 {{RSA: Chave Publica}}</pre>
+</div>
+<div created="20160119113443413" modified="20161116140341214" tags="comando linux cmd data modificação [[linux cmd]]" title="stat">
+<pre>''stat:'' Exibe a data de modificação de um arquivo com possibilidade de formatação da data.
+
+''Ultima modificação:''
+
+```
+$ stat -c %y &lt;arquivo&gt;
+```
+
+''Criação:''
+
+```
+$ stat -c %w &lt;arquivo&gt;
+```
+
+''Todos os status:''
+
+```
+stat &lt;arquivo&gt;
+```
+
+
+Sobre o que a saída do comando:
+
+''Existem 3 tipos de &quot;timestamps&quot;:''
+
+    *''Access'' - Ultima vêz que o arquivo foi lido/aberto
+    *''Modify'' - A ultima vez que o conteúdo do arquivo foi alterado
+    *''Change'' - A ultima vêz alguém alterou algum meta dado do arquivo (ex.: permissões)
+</pre>
 </div>
 <div created="20200107184225015" modified="20200107184834351" tags="password link" title="VPN Maplink">
 <pre>[[vpn.maplink.global]]
