@@ -145,6 +145,8 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import</li>
 
+<li>$:/config/RelinkOnRename</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -199,7 +201,11 @@ Error message and password prompt
 
 <li>Cloudstack</li>
 
+<li>Comando: Findsrt</li>
+
 <li>Comando: Tail (PowerShell)</li>
+
+<li>Comando: tasklist</li>
 
 <li>Comandos windows powershell</li>
 
@@ -210,8 +216,6 @@ Error message and password prompt
 <li>du</li>
 
 <li>Equinix</li>
-
-<li>findsrt</li>
 
 <li>GettingStarted</li>
 
@@ -274,6 +278,9 @@ done
 </div>
 <div created="20200107184212180" modified="20200109185228304" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import">
 <pre>show</pre>
+</div>
+<div created="20200109190924565" modified="20200109190936149" title="$:/config/RelinkOnRename">
+<pre>yes</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.21">
 <pre>{
@@ -9621,7 +9628,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200108202807171" list="[[Comandos windows powershell]] [[Comando: Tail (PowerShell)]] findsrt" modified="20200109190642749" title="$:/StoryList">
+<div created="20200108202807171" list="[[Comando: tasklist]] [[Comandos windows powershell]] [[Comando: Tail (PowerShell)]] [[Comando: Findsrt]]" modified="20200109190642749" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9809,6 +9816,27 @@ done
 <div created="20200107191004151" encrypted="{&quot;iv&quot;:&quot;dI1Diqx/sUEC470xaFztGw==&quot;,&quot;v&quot;:1,&quot;iter&quot;:10000,&quot;ks&quot;:128,&quot;ts&quot;:64,&quot;mode&quot;:&quot;ccm&quot;,&quot;adata&quot;:&quot;&quot;,&quot;cipher&quot;:&quot;aes&quot;,&quot;salt&quot;:&quot;CB0ppOn0DEk=&quot;,&quot;ct&quot;:&quot;qRweQqucFCT1ArEauEsJ2YbuCLHn1HL6b4+KjVf4v2dS9mNiB6Wc+JR7UqiWSu5mM6VRQN5KO1lZ6CcPgdGKhJzO4fuVcZI2NvyYMAET+DsAOmP1VRjfzlDnBVLGUVmQOywls0lV1h/3eBoUYZ8/w0KYuCxBviar0Qe6vT0zvZV31n0IfpYN242A5XlDoN2S4lvaaOvSE4WklFVWbBTYjg5QXqk5dLmx6yT9U+3/BNNM0boL9k2WEyu8azPtrfCB2/yPhIk69aNOzhVo1diJGkiEKdTZ8iFzqeayQfImEw==&quot;}" modified="20200107191103362" tags="cloudstack link password" title="Cloudstack">
 <pre>!This is an encrypted Tiddler</pre>
 </div>
+<div created="20200109190632689" modified="20200109190937607" tags="grep cmd [[windows cmd]] command" title="Comando: Findsrt">
+<pre>''Equivalente ao grep no Windows''
+
+```
+findstr &lt;string&gt;
+```
+
+grep -v
+
+```
+findstr /V &lt;string&gt;
+```
+
+grep -i
+
+```
+findstr /I &lt;string&gt;
+```
+
+</pre>
+</div>
 <div created="20160531175826564" modified="20160825134013660" tags="tail windows command [[windows cmd]]" title="Comando: Tail (PowerShell)">
 <pre>//Tail// para windows:
 
@@ -9821,6 +9849,15 @@ Get-Content &lt;/path/log&gt; -wait
 ```
 Get-Content &lt;/path/log&gt; -wait | where {$_ -match &quot;&lt;expressao&gt;&quot;}
 ```</pre>
+</div>
+<div created="20200109191003768" modified="20200109191141417" tags="process ps [[windows cmd]] cmd" title="Comando: tasklist">
+<pre>Comando para listar os processos rodando em uma máquina windows:
+
+
+```
+tasklist
+```
+</pre>
 </div>
 <div created="20160607171058829" modified="20160825132800194" tags="Comando cmd ajuda windows powershell" title="Comandos windows powershell">
 <pre>''Comandos e dicas sobre Windows:''
@@ -9890,27 +9927,6 @@ du -h --max-depth=1 | sort -hr
 </div>
 <div created="20200107143140400" encrypted="{&quot;iv&quot;:&quot;VMJjLl27L0dN2JOJj3siuQ==&quot;,&quot;v&quot;:1,&quot;iter&quot;:10000,&quot;ks&quot;:128,&quot;ts&quot;:64,&quot;mode&quot;:&quot;ccm&quot;,&quot;adata&quot;:&quot;&quot;,&quot;cipher&quot;:&quot;aes&quot;,&quot;salt&quot;:&quot;3pxj273i9po=&quot;,&quot;ct&quot;:&quot;IeMyuJghBPyQZLvhMJgUcddAolT4kf5bWsjlB2BlQhJEa9X5k9bh2nZd4+raEqpH8NApk7eLaUON+6VpAG4hbmyxlt85nRUQyuB6/RSFPMYdX2P6LMJ9mq6sH6vrzOOeb6mXl1eANZIp4AONAVJcUg8a9DofCBduH2tdiMndnGkWmTtyakljCX6PirCUKogYPceUzg3ItmT7xIEzfDx6/Sp8yG9EQ6nbjVLTZ6CqnV1X0DxnmvweW89/6BB/Czde3LsLnvuVm7+XrASFLX9V0U0o2ngL8j+LwTj2u4Fbo1k=&quot;}" modified="20200107143742920" tags="password" title="Equinix">
 <pre>!This is an encrypted Tiddler</pre>
-</div>
-<div created="20200109190632689" modified="20200109190903998" tags="grep cmd [[windows cmd]] command" title="findsrt">
-<pre>''Equivalente ao grep no Windows''
-
-```
-findstr &lt;string&gt;
-```
-
-grep -v
-
-```
-findstr /V &lt;string&gt;
-```
-
-grep -i
-
-```
-findstr /I &lt;string&gt;
-```
-
-</pre>
 </div>
 <div created="20200107192418668" modified="20200107192418668" title="GettingStarted">
 <pre>\define lingo-base() $:/language/ControlPanel/Basics/
