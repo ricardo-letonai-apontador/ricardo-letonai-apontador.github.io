@@ -195,6 +195,8 @@ Error message and password prompt
 
 <li>$:/UploadName</li>
 
+<li>Alterar a data e hora de um arquivo(PowerShell)</li>
+
 <li>Cloudstack</li>
 
 <li>du</li>
@@ -222,6 +224,8 @@ Error message and password prompt
 <li>Servers</li>
 
 <li>stat</li>
+
+<li>tmpSetting</li>
 
 <li>VPN Maplink</li>
 
@@ -9468,7 +9472,7 @@ done
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Nova Instalação]]</pre>
+# [[Alterar a data e hora de um arquivo(PowerShell)]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9603,7 +9607,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200108202807171" list="$:/Import [[Limpeza de logs e arquivos antigos]] [[Limpeza de logs e arquivos antigos (Windows)]]" modified="20200109185332258" title="$:/StoryList">
+<div created="20200108202807171" list="$:/Import" modified="20200109185848305" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9781,6 +9785,12 @@ done
 </div>
 <div created="20200107144739100" modified="20200107144803040" title="$:/UploadName">
 <pre></pre>
+</div>
+<div created="20160825134127715" modified="20160825135437805" tags="windows [[windows cmd]] powershell data" title="Alterar a data e hora de um arquivo(PowerShell)">
+<pre>```
+(Get-ChildItem &lt;path do arquivo&gt;).LastWriteTime=&quot;&lt;data&gt;&quot;
+
+```</pre>
 </div>
 <div created="20200107191004151" encrypted="{&quot;iv&quot;:&quot;dI1Diqx/sUEC470xaFztGw==&quot;,&quot;v&quot;:1,&quot;iter&quot;:10000,&quot;ks&quot;:128,&quot;ts&quot;:64,&quot;mode&quot;:&quot;ccm&quot;,&quot;adata&quot;:&quot;&quot;,&quot;cipher&quot;:&quot;aes&quot;,&quot;salt&quot;:&quot;CB0ppOn0DEk=&quot;,&quot;ct&quot;:&quot;qRweQqucFCT1ArEauEsJ2YbuCLHn1HL6b4+KjVf4v2dS9mNiB6Wc+JR7UqiWSu5mM6VRQN5KO1lZ6CcPgdGKhJzO4fuVcZI2NvyYMAET+DsAOmP1VRjfzlDnBVLGUVmQOywls0lV1h/3eBoUYZ8/w0KYuCxBviar0Qe6vT0zvZV31n0IfpYN242A5XlDoN2S4lvaaOvSE4WklFVWbBTYjg5QXqk5dLmx6yT9U+3/BNNM0boL9k2WEyu8azPtrfCB2/yPhIk69aNOzhVo1diJGkiEKdTZ8iFzqeayQfImEw==&quot;}" modified="20200107191103362" tags="cloudstack link password" title="Cloudstack">
 <pre>!This is an encrypted Tiddler</pre>
@@ -10197,6 +10207,9 @@ Sobre o que a saída do comando:
     *''Modify'' - A ultima vez que o conteúdo do arquivo foi alterado
     *''Change'' - A ultima vêz alguém alterou algum meta dado do arquivo (ex.: permissões)
 </pre>
+</div>
+<div chamado="LAPCHA-1010" created="20160830191310656" hora="01:10" modified="20160830191323535" title="tmpSetting">
+<pre></pre>
 </div>
 <div created="20200107184225015" modified="20200107184834351" tags="password link" title="VPN Maplink">
 <pre>[[vpn.maplink.global]]
