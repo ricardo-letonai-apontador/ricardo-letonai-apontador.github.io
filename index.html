@@ -203,6 +203,8 @@ Error message and password prompt
 
 <li>Comandos windows powershell</li>
 
+<li>Compactar arquivos por mês</li>
+
 <li>Criação de usuário</li>
 
 <li>du</li>
@@ -230,6 +232,8 @@ Error message and password prompt
 <li>Script para apagar os backups do PMP(Windows))</li>
 
 <li>Servers</li>
+
+<li>SSH por troca de chaves</li>
 
 <li>stat</li>
 
@@ -9480,7 +9484,7 @@ done
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Criação de usuário]]</pre>
+# [[Compactar arquivos por mês]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9820,6 +9824,13 @@ Get-Content &lt;/path/log&gt; -wait | where {$_ -match &quot;&lt;expressao&gt;&q
 <pre>''Comandos e dicas sobre Windows:''
 
 &lt;&lt;list-links filter:&quot;[tag[windows cmd]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20160704143006445" modified="20160704143628620" tags="find compactação espaço [[linux cmd]]" title="Compactar arquivos por mês">
+<pre>Encontra arquivos de um determinado mês, move para tmp, e compacta os arquivos no diretório original:
+
+```
+m=&quot;Apr&quot; &amp;&amp; mkdir /tmp/$m &amp;&amp; find . -newermt &quot;$m 01, 2016&quot; -not -newermt &quot;$m 30, 2016&quot; -exec mv {} /tmp/$m \; &amp;&amp; tar -jcvf ${m}.tar.bz2 /tmp/$m &amp;&amp; rm -rf /tmp/$m
+```</pre>
 </div>
 <div created="20160715200227297" modified="20160823132714320" tags="[[linux cmd]] script admin root user usuário permissoes" title="Criação de usuário">
 <pre>Script para criação de usuários com os grupos básicos de para manipulação de Arquivos do Pims:
@@ -10283,6 +10294,48 @@ E executar com o powershell como descrito em
 Pubkey:
 
 {{RSA: Chave Publica}}</pre>
+</div>
+<div created="20151008201545744" modified="20160810131119514" tags="ssh chaves linux remoto senha [[linux cmd]]" title="SSH por troca de chaves">
+<pre>É necessário gerar uma chave privada e uma chave pública, com o seguinte comando:&lt;br&gt;
+
+```
+$ ssh-keygen -t dsa
+```
+
+Será perguntado sobre o ''local'' onde o as ''chaves'' serão ''armazenadas'' e sobre a senha.
+Informar o diretório ''~/.ssh''
+A senha //(caso omitir a senha, ela não será perguntada na conexão)//
+
+Serão criados 2 arquivos:&lt;br&gt;
+''id_dsa'': Arquivo de chave privada
+''id_dsa.pub'': Arquivo de chave publica
+
+Copiar a chave ''pública'' para o servidor ao
+qual será feita a conexão:
+
+```
+ssh-copy-id user@serv
+```
+
+
+Para fazer a cópia manualmente :
+
+```
+scp id_dsa.pub user@serv:.ssh
+```
+
+No servidor alvo, adicionar o conteúdo da chave publica no arquivo:
+''~/.ssh/authorized_keys''
+
+```
+cat ~/.ssh/id_dsa.pub &gt;&gt; ./ssh/authorized_keys 
+```
+
+
+
+
+
+</pre>
 </div>
 <div created="20160119113443413" modified="20161116140341214" tags="comando linux cmd data modificação [[linux cmd]]" title="stat">
 <pre>''stat:'' Exibe a data de modificação de um arquivo com possibilidade de formatação da data.
