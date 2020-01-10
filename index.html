@@ -9930,19 +9930,19 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 ```
 </pre>
 </div>
-<div created="20160826193330618" draft.of="Novo Servidor" draft.title="Novo Servidor" modified="20200110200223715" tags="Formulario instalação instalacao lapcha" title="Draft of 'Novo Servidor'">
+<div created="20160826193330618" draft.of="Novo Servidor" draft.title="Novo Servidor" modified="20200110200510580" tags="Formulario instalação instalacao lapcha" title="Draft of 'Novo Servidor'">
 <pre>|! Nome:|&lt;$edit-text field=&quot;Server&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
 | !Ip:|&lt;$edit-text field=&quot;IP&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 | !OS:|&lt;$edit-text field=&quot;OS&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 
 &lt;$button&gt;
-&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; tags=&quot;server&quot; title=&quot;&quot;xxx
+&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; tags=&quot;server&quot; title={{tmpSetting!!Servidor}}
 IP={{tmpSetting!!IP}}
 Server={{tmpSetting!!Server}}
 OS={{tmpSetting!!OS}}
 
 text='\define url()
-
+[[teste]]
 |!SERVER|!IP|!OS|
 |{{tmpSetting!!Server}}|{{tmpSetting!!IP}}|{{tmpSetting!!OS}}|
 '
