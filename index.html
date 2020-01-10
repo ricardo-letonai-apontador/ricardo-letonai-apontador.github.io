@@ -219,8 +219,6 @@ Error message and password prompt
 
 <li>Criação de usuário</li>
 
-<li>Draft of 'Novo Servidor'</li>
-
 <li>du</li>
 
 <li>Equinix</li>
@@ -9624,8 +9622,8 @@ done
 <div created="20200107141225486" modified="20200107142002242" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200110193530939" modified="20200110201630219" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20200110193530939" modified="20200110201810218" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20200107144648395" modified="20200107144648395" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
@@ -9645,7 +9643,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200110193419409" list="[[Draft of 'Novo Servidor']]" modified="20200110201205087" title="$:/StoryList">
+<div created="20200110193419409" list="[[Novo Servidor]]" modified="20200110201205087" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9928,25 +9926,6 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 ```
 &lt;usuario&gt;:&lt;nome completo&gt;
 ```
-</pre>
-</div>
-<div created="20160826193330618" draft.of="Novo Servidor" draft.title="Novo Servidor" modified="20200110201648536" tags="Formulario instalação instalacao lapcha" title="Draft of 'Novo Servidor'">
-<pre>|! Nome:|&lt;$edit-text field=&quot;Server&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
-| !Ip:|&lt;$edit-text field=&quot;IP&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
-| !OS:|&lt;$edit-text field=&quot;OS&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
-
-&lt;$button&gt;
-&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; tags=&quot;server&quot; title={{tmpSetting!!Server}}
-IP={{tmpSetting!!IP}}
-Server={{tmpSetting!!Server}}
-OS={{tmpSetting!!OS}}
-
-text='\define url()
-
-|!SERVER|!IP|!OS|
-|{{tmpSetting!!Server}}|{{tmpSetting!!IP}}|{{tmpSetting!!OS}}|
-'/&gt;
-Novo&lt;/$button&gt;
 </pre>
 </div>
 <div created="20160701150013456" modified="20161019181237961" tags="comando [[linux cmd]] cmd command linux disco espaço utilizado ocupado tamanho" title="du" type="">
@@ -10301,14 +10280,13 @@ cy5BZGQoJEZpbGVQaWNrZXIpDQoNCg0KW3ZvaWRdICRvYmpGb3JtLlNob3dEaWFsb2coKQ0K&quot;&g
 <div created="20200107140811630" modified="20200107141236482" tags="" title="New Tiddler">
 <pre>[list[password]]</pre>
 </div>
-<div created="20160826193330618" modified="20200110201148091" tags="Formulario instalação instalacao lapcha" title="Novo Servidor">
+<div created="20160826193330618" modified="20200110201738222" tags="Formulario instalação instalacao lapcha" title="Novo Servidor">
 <pre>|! Nome:|&lt;$edit-text field=&quot;Server&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
 | !Ip:|&lt;$edit-text field=&quot;IP&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 | !OS:|&lt;$edit-text field=&quot;OS&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 
 &lt;$button&gt;
-
-&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; tags=&quot;server&quot; title={{tmpSetting!!Servidor}}
+&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; tags=&quot;server&quot; title={{tmpSetting!!Server}}
 IP={{tmpSetting!!IP}}
 Server={{tmpSetting!!Server}}
 OS={{tmpSetting!!OS}}
@@ -10317,10 +10295,8 @@ text='\define url()
 
 |!SERVER|!IP|!OS|
 |{{tmpSetting!!Server}}|{{tmpSetting!!IP}}|{{tmpSetting!!OS}}|
-'
-/&gt;
-Novo
-&lt;/$button&gt;
+'/&gt;
+Novo&lt;/$button&gt;
 </pre>
 </div>
 <div created="20160517203435532" modified="20160607143417132" tags="download scp console terminal windows" title="Pscp" type="application/x-tiddler">
