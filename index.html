@@ -173,6 +173,8 @@ Error message and password prompt
 
 <li>$:/state/tab--1963855381</li>
 
+<li>$:/state/tab--2112689675</li>
+
 <li>$:/state/tab--86143343</li>
 
 <li>$:/state/tab-1749438307</li>
@@ -235,7 +237,7 @@ Error message and password prompt
 
 <li>New Tiddler</li>
 
-<li>Novo Servidor</li>
+<li>Nova Instalação</li>
 
 <li>Pscp</li>
 
@@ -243,7 +245,7 @@ Error message and password prompt
 
 <li>RSA: Chave Publica</li>
 
-<li>Script para apagar os backups do PMP(Windows))</li>
+<li>Script para apagar arquivos antigos</li>
 
 <li>Servers</li>
 
@@ -9500,10 +9502,15 @@ done
 <div created="20200107144708959" modified="20200107182932247" title="$:/GitHub/Username">
 <pre>ricardo-letonai-apontador</pre>
 </div>
-<div status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[Pscp]]</pre>
+<div plugin-type="import" status="pending" title="$:/Import" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;Untitled&quot;: {
+            &quot;title&quot;: &quot;Untitled&quot;,
+            &quot;text&quot;: &quot;Script para apagar os backups do PMP(Windows))&quot;
+        }
+    }
+}</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -9620,14 +9627,17 @@ done
 <div created="20200107141225486" modified="20200107142002242" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200107144648395" modified="20200107144648395" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20200107144648395" modified="20200109193447048" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
+</div>
+<div created="20200109193413134" modified="20200109193424880" title="$:/state/tab--2112689675">
+<pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
 <div created="20200107144818622" modified="20200107144821596" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
-<div created="20200107144616342" modified="20200109185225087" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200107144616342" modified="20200109193456727" title="$:/state/tab-1749438307">
+<pre>$:/plugins/danielo/encryptTiddler/control-panel</pre>
 </div>
 <div created="20200107144626706" modified="20200107184434032" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -9635,10 +9645,10 @@ done
 <div created="20200107141929446" modified="20200107141929446" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Recent</pre>
 </div>
-<div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
-<pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
+<div created="20200107183834872" modified="20200109193442657" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<pre>$:/core/ui/ControlPanel/Toolbars/ViewToolbar</pre>
 </div>
-<div created="20200108202807171" list="[[Novo Servidor]] [[Comandos windows powershell]]" modified="20200109191930113" title="$:/StoryList">
+<div created="20200109193344556" list="$:/Import [[Comandos windows powershell]] [[Script para apagar arquivos antigos]] [[Comando: Schtasks]]" modified="20200110183310837" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9702,8 +9712,8 @@ done
 <div created="20200107182650844" modified="20200107192313917" title="$:/temp/password">
 <pre></pre>
 </div>
-<div created="20200109191928522" modified="20200109191928841" title="$:/temp/search">
-<pre>insta</pre>
+<div created="20200109191928522" modified="20200109193742697" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20200107144639683" modified="20200107144646398" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -10275,8 +10285,8 @@ cy5BZGQoJEZpbGVQaWNrZXIpDQoNCg0KW3ZvaWRdICRvYmpGb3JtLlNob3dEaWFsb2coKQ0K&quot;&g
 <div created="20200107140811630" modified="20200107141236482" tags="" title="New Tiddler">
 <pre>[list[password]]</pre>
 </div>
-<div created="20160826193330618" modified="20200109192038723" tags="Formulario instalação instalacao lapcha" title="Novo Servidor">
-<pre>|! IP:|&lt;$edit-text field=&quot;chamado&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
+<div created="20160826193330618" modified="20160829143245103" tags="Formulario instalação instalacao lapcha" title="Nova Instalação">
+<pre>|! Chamado:|&lt;$edit-text field=&quot;chamado&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
 | !Hora:|&lt;$edit-text field=&quot;hora&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 
 &lt;$button&gt;
@@ -18789,7 +18799,7 @@ putty.exe -load &lt;profile&gt; &lt;ip&gt; -ssh -l &lt;usuário&gt; -pw &lt;senh
 <div created="20200107144155381" encrypted="{&quot;iv&quot;:&quot;YPNhpJ0jYfbLbrQMq+9CRQ==&quot;,&quot;v&quot;:1,&quot;iter&quot;:10000,&quot;ks&quot;:128,&quot;ts&quot;:64,&quot;mode&quot;:&quot;ccm&quot;,&quot;adata&quot;:&quot;&quot;,&quot;cipher&quot;:&quot;aes&quot;,&quot;salt&quot;:&quot;3pxj273i9po=&quot;,&quot;ct&quot;:&quot;fbmbKYP0XByixoFqrPAS2p00BfeRci14mHQgAEHw+aSm8BrvWPbT6WYzA0g50lRWxXZriam0j52+ulngFY7ffe88fQ/YZxAxWq+9QtcrS/253b3ZAgW2iTodg+1giU5BUGTkfJ/B9yHF/mta7DcFLjFznri5E9/M86cimv19rJRwafSRmxgbVwYd4zsfoCaZebxNf9kSteE0zyMr6wLsPHxP5Yi/8boAsME3x9aDvPoBhful8BdpEL1oTmP128PUVbYKWWlldT/f55Sl9mSUembgUTpQ6oxqEsdVRs42/GFDxBC/FaLAHXCHqG3fLIx2F6JVVQeutRNGIwNkydu4OZ52PJYYY678sY4Rvw5tT8lT7BvVz6oWE7Oq+zLvBYaygBfoMN7ZmtfWS4ISvrDR/edGX5wViRg1i/pXatUU5APaK63gDASQvhJXbkMj7aCEolM806jeh+LbJneCNVQXVMehngbzXNwfFdHid+35OtFY6G8vm6d9TJs7G9ms/gE9unD//Dp2OJxnvgKCcTBH/OY95kKqIwVlCeDk31aEkCVO4hA1aY3Te30n6t6J87WclnA4GIvgh7etDlQFtQYTbfXs5TqOyenFTyColUy/JyG24/XwjadCLe4DeTf753d7b3G3DuBI6Ja5WhhatLPcYZeM/ZYk4mWR6rmaWroeZIDF0cjRlHNsVVZiYCrSbNHoiWc4klrIYrpYVmJGj09m74paL8tvvKtpBGWBOS0L9BS38JAoFSCyZYUUU/XiT3+o9qGK8LbpO7SnoDMVoHyYwNzfYjHfZYPOgqv0KNrhBr6DoMWgG4RzqNhrXEPN2mogvqyFZE/gTaLJQnEBaryV3swDJ63ZH01D6XIGD57YEjz4DOeK0JDA/Lo5y63q/5KcYZniSFFYXFkbHJo7BpXiIehBJrxhnVfu3t85hTQG8N8J5wcX36NYAg==&quot;}" modified="20200107144219901" tags="" title="RSA: Chave Publica">
 <pre>!This is an encrypted Tiddler</pre>
 </div>
-<div created="20160825131554725" modified="20160825132607347" tags="pmp zip powershell [[windows cmd]]" title="Script para apagar os backups do PMP(Windows))">
+<div created="20160825131554725" modified="20200110183409128" tags="pmp zip powershell [[windows cmd]]" title="Script para apagar arquivos antigos">
 <pre>Script em powershellpara apagar arquivos //zip// e //tmp//:
 
 ```
@@ -18837,8 +18847,7 @@ Salvar este arquivo como
 limpaBackUp.ps1
 ```
 
-E executar com o powershell como descrito em 
-[[Limpeza PMP]]</pre>
+E executar com o powershell como descrito em </pre>
 </div>
 <div created="20200107152039917" modified="20200107152459759" tags="ip server" title="Servers">
 <pre>|!Server|!IP|
