@@ -9932,7 +9932,7 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 ```
 </pre>
 </div>
-<div created="20160826193330618" draft.of="Novo Servidor" draft.title="Novo Servidor" modified="20200110195143992" tags="Formulario instalação instalacao lapcha" title="Draft of 'Novo Servidor'">
+<div created="20160826193330618" draft.of="Novo Servidor" draft.title="Novo Servidor" modified="20200110195528425" tags="Formulario instalação instalacao lapcha" title="Draft of 'Novo Servidor'">
 <pre>|! Nome:|&lt;$edit-text field=&quot;Server&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
 | !Ip:|&lt;$edit-text field=&quot;IP&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 | !OS:|&lt;$edit-text field=&quot;OS&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
@@ -9942,7 +9942,7 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 IP={{tmpSetting!!IP}}
 Server={{tmpSetting!!Server}}
 OS={{tmpSetting!!OS}}
-
+{{tmpSetting!!IP}}
 text='\define url()
 http://tms-jira.cardifnet.com/browse/$(currentTiddler)$
 \end
