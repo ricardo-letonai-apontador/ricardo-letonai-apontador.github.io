@@ -219,6 +219,8 @@ Error message and password prompt
 
 <li>Criação de usuário</li>
 
+<li>Draft of 'tmpSetting'</li>
+
 <li>du</li>
 
 <li>Equinix</li>
@@ -237,7 +239,7 @@ Error message and password prompt
 
 <li>New Tiddler</li>
 
-<li>Nova Instalação</li>
+<li>Novo Servidor</li>
 
 <li>Pscp</li>
 
@@ -9622,7 +9624,7 @@ done
 <div created="20200107141225486" modified="20200107142002242" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200110193530939" modified="20200110193530939" title="$:/state/sidebar">
+<div created="20200110193530939" modified="20200110194033299" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
 <div created="20200107144648395" modified="20200107144648395" title="$:/state/tab--1963855381">
@@ -9643,7 +9645,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200110193419409" list="[[Nova Instalação]] $:/Import [[Comandos windows powershell]] [[Script para apagar arquivos antigos]]" modified="20200110193521433" title="$:/StoryList">
+<div created="20200110193419409" list="[[Draft of 'tmpSetting']] [[Novo Servidor]] $:/Import [[Comandos windows powershell]] [[Script para apagar arquivos antigos]]" modified="20200110194019180" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9707,8 +9709,8 @@ done
 <div created="20200107182650844" modified="20200107192313917" title="$:/temp/password">
 <pre></pre>
 </div>
-<div created="20200109191928522" modified="20200109191928841" title="$:/temp/search">
-<pre>insta</pre>
+<div created="20200109191928522" modified="20200110194017051" title="$:/temp/search">
+<pre>tmp</pre>
 </div>
 <div created="20200107144639683" modified="20200107144646398" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -9927,6 +9929,9 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 &lt;usuario&gt;:&lt;nome completo&gt;
 ```
 </pre>
+</div>
+<div created="20160830191310656" draft.of="tmpSetting" draft.title="tmpSetting" ip="" modified="20200110194221218" os="" server="" title="Draft of 'tmpSetting'">
+<pre></pre>
 </div>
 <div created="20160701150013456" modified="20161019181237961" tags="comando [[linux cmd]] cmd command linux disco espaço utilizado ocupado tamanho" title="du" type="">
 <pre>''du'': Exibe o tamanho de um ou mais arquivos ou diretórios:
@@ -10280,12 +10285,13 @@ cy5BZGQoJEZpbGVQaWNrZXIpDQoNCg0KW3ZvaWRdICRvYmpGb3JtLlNob3dEaWFsb2coKQ0K&quot;&g
 <div created="20200107140811630" modified="20200107141236482" tags="" title="New Tiddler">
 <pre>[list[password]]</pre>
 </div>
-<div created="20160826193330618" modified="20160829143245103" tags="Formulario instalação instalacao lapcha" title="Nova Instalação">
-<pre>|! Chamado:|&lt;$edit-text field=&quot;chamado&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
-| !Hora:|&lt;$edit-text field=&quot;hora&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
+<div created="20160826193330618" modified="20200110194537856" tags="Formulario instalação instalacao lapcha" title="Novo Servidor">
+<pre>|! Nome:|&lt;$edit-text field=&quot;Server&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
+| !Ip:|&lt;$edit-text field=&quot;IP&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
+| !OS:|&lt;$edit-text field=&quot;OS&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 
 &lt;$button&gt;
-&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; tags=&quot;inst&quot; title={{tmpSetting!!chamado}}
+&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; tags=&quot;server&quot; title={{tmpSetting!!Servidor}}
 data=&lt;&lt;now DD/MM/YYYY&gt;&gt;
 janela={{tmpSetting!!hora}}
 text='\define url()
