@@ -9624,8 +9624,8 @@ done
 <div created="20200107141225486" modified="20200107142002242" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200110193530939" modified="20200110201405136" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20200110193530939" modified="20200110201630219" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20200107144648395" modified="20200107144648395" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
@@ -9930,13 +9930,13 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 ```
 </pre>
 </div>
-<div created="20160826193330618" draft.of="Novo Servidor" draft.title="Novo Servidor" modified="20200110201524647" tags="Formulario instalação instalacao lapcha" title="Draft of 'Novo Servidor'">
+<div created="20160826193330618" draft.of="Novo Servidor" draft.title="Novo Servidor" modified="20200110201648536" tags="Formulario instalação instalacao lapcha" title="Draft of 'Novo Servidor'">
 <pre>|! Nome:|&lt;$edit-text field=&quot;Server&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
 | !Ip:|&lt;$edit-text field=&quot;IP&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 | !OS:|&lt;$edit-text field=&quot;OS&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 
 &lt;$button&gt;
-&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; tags=&quot;server&quot; title={{tmpSetting!!Servidor}}
+&lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot; tags=&quot;server&quot; title={{tmpSetting!!Server}}
 IP={{tmpSetting!!IP}}
 Server={{tmpSetting!!Server}}
 OS={{tmpSetting!!OS}}
@@ -9946,7 +9946,6 @@ text='\define url()
 |!SERVER|!IP|!OS|
 |{{tmpSetting!!Server}}|{{tmpSetting!!IP}}|{{tmpSetting!!OS}}|
 '/&gt;
-&lt;$set $title=&quot;sss&quot;/&gt;
 Novo&lt;/$button&gt;
 </pre>
 </div>
