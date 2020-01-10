@@ -219,6 +219,8 @@ Error message and password prompt
 
 <li>Criação de usuário</li>
 
+<li>Draft of 'New Tiddler'</li>
+
 <li>du</li>
 
 <li>Equinix</li>
@@ -248,6 +250,8 @@ Error message and password prompt
 <li>SSH por troca de chaves</li>
 
 <li>stat</li>
+
+<li>TesteNome</li>
 
 <li>tmpSetting</li>
 
@@ -9618,7 +9622,7 @@ done
 <div created="20200107141225486" modified="20200107142002242" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200110193530939" modified="20200110201810218" title="$:/state/sidebar">
+<div created="20200110193530939" modified="20200110202450716" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200107144648395" modified="20200107144648395" title="$:/state/tab--1963855381">
@@ -9639,7 +9643,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200110193419409" list="[[Novo Servidor]]" modified="20200110202119551" title="$:/StoryList">
+<div created="20200110193419409" list="[[Draft of 'New Tiddler']] [[Comandos windows powershell]] [[Novo Servidor]] TesteNome" modified="20200110202202972" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9703,8 +9707,8 @@ done
 <div created="20200107182650844" modified="20200107192313917" title="$:/temp/password">
 <pre></pre>
 </div>
-<div created="20200109191928522" modified="20200110201856707" title="$:/temp/search">
-<pre>ser</pre>
+<div created="20200109191928522" modified="20200110202201217" title="$:/temp/search">
+<pre>windo</pre>
 </div>
 <div created="20200107144639683" modified="20200107144646398" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -9923,6 +9927,9 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 &lt;usuario&gt;:&lt;nome completo&gt;
 ```
 </pre>
+</div>
+<div created="20200110202451908" draft.of="New Tiddler" draft.title="New Tiddler" modified="20200110202459969" tags="" title="Draft of 'New Tiddler'">
+<pre>&lt;&lt;ColumnTable '[tag[Servers]]'&gt;&gt;</pre>
 </div>
 <div created="20160701150013456" modified="20161019181237961" tags="comando [[linux cmd]] cmd command linux disco espaço utilizado ocupado tamanho" title="du" type="">
 <pre>''du'': Exibe o tamanho de um ou mais arquivos ou diretórios:
@@ -18906,6 +18913,13 @@ Sobre o que a saída do comando:
     *''Access'' - Ultima vêz que o arquivo foi lido/aberto
     *''Modify'' - A ultima vez que o conteúdo do arquivo foi alterado
     *''Change'' - A ultima vêz alguém alterou algum meta dado do arquivo (ex.: permissões)
+</pre>
+</div>
+<div IP="192.1919191" OS="Windows" Server="TesteNome" created="20200110202505860" modified="20200110202509082" tags="server" title="TesteNome">
+<pre>\define url()
+
+|!SERVER|!IP|!OS|
+|{{tmpSetting!!Server}}|{{tmpSetting!!IP}}|{{tmpSetting!!OS}}|
 </pre>
 </div>
 <div IP="192.1919191" OS="Windows" Server="TesteNome" created="20200110200004544" modified="20200110200011872" title="tmpSetting">
