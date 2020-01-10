@@ -219,6 +219,8 @@ Error message and password prompt
 
 <li>Criação de usuário</li>
 
+<li>Draft of 'New Tiddler 1'</li>
+
 <li>Draft of 'Novo Servidor'</li>
 
 <li>Draft of 'tmpSetting'</li>
@@ -9647,7 +9649,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200110193419409" list="[[Draft of 'tmpSetting']] [[Draft of 'Novo Servidor']]" modified="20200110194019180" title="$:/StoryList">
+<div created="20200110193419409" list="[[Draft of 'tmpSetting']] [[Draft of 'Novo Servidor']] [[Draft of 'New Tiddler 1']]" modified="20200110194019180" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9932,7 +9934,16 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 ```
 </pre>
 </div>
-<div created="20160826193330618" draft.of="Novo Servidor" draft.title="Novo Servidor" modified="20200110195528425" tags="Formulario instalação instalacao lapcha" title="Draft of 'Novo Servidor'">
+<div IP="ip" OS="os" Server="nome" created="20200110195622826" draft.of="New Tiddler 1" draft.title="New Tiddler 1" modified="20200110195622826" tags="server" title="Draft of 'New Tiddler 1'">
+<pre>\define url()
+http://tms-jira.cardifnet.com/browse/$(currentTiddler)$
+\end
+Jira:
+&lt;a href=&lt;&lt;url&gt;&gt; target=&quot;_blank&quot;&gt;{{!!title}}&lt;/a&gt;
+{{tmpSetting!!IP}}
+</pre>
+</div>
+<div created="20160826193330618" draft.of="Novo Servidor" draft.title="Novo Servidor" modified="20200110195700144" tags="Formulario instalação instalacao lapcha" title="Draft of 'Novo Servidor'">
 <pre>|! Nome:|&lt;$edit-text field=&quot;Server&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
 | !Ip:|&lt;$edit-text field=&quot;IP&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
 | !OS:|&lt;$edit-text field=&quot;OS&quot;  tiddler=&quot;tmpSetting&quot;/&gt;|
@@ -9942,12 +9953,13 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 IP={{tmpSetting!!IP}}
 Server={{tmpSetting!!Server}}
 OS={{tmpSetting!!OS}}
-{{tmpSetting!!IP}}
+
 text='\define url()
-http://tms-jira.cardifnet.com/browse/$(currentTiddler)$
-\end
-Jira:
-&lt;a href=&lt;&lt;url&gt;&gt; target=&quot;_blank&quot;&gt;{{!!title}}&lt;/a&gt;
+//http://tms-jira.cardifnet.com/browse/$(currentTiddler)$
+//\end
+//Jira:
+//&lt;a href=&lt;&lt;url&gt;&gt; target=&quot;_blank&quot;&gt;{{!!title}}&lt;/a&gt;
+{{tmpSetting!!IP}}
 '
 /&gt;
 Novo
