@@ -235,8 +235,6 @@ Error message and password prompt
 
 <li>MD5 Grafico (PowerShell)</li>
 
-<li>New Tiddler</li>
-
 <li>Novo Servidor</li>
 
 <li>Pscp</li>
@@ -246,6 +244,8 @@ Error message and password prompt
 <li>RSA: Chave Publica</li>
 
 <li>Script para apagar arquivos antigos</li>
+
+<li>Server List</li>
 
 <li>SSH por troca de chaves</li>
 
@@ -9624,8 +9624,8 @@ done
 <div created="20200107141225486" modified="20200107142002242" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200110193530939" modified="20200113112013947" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20200110193530939" modified="20200113112536109" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
 <div created="20200107144648395" modified="20200107144648395" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
@@ -9645,7 +9645,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200110193419409" list="[[New Tiddler]] [[Novo Servidor]] TesteNome TesteNome2" modified="20200110202202972" title="$:/StoryList">
+<div created="20200110193419409" list="[[Server List]]" modified="20200113112909824" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10278,31 +10278,6 @@ cy5BZGQoJEZpbGVQaWNrZXIpDQoNCg0KW3ZvaWRdICRvYmpGb3JtLlNob3dEaWFsb2coKQ0K&quot;&g
 #Selecione o arquivo desejado:{{ljasdhasdkljhadskjhadsdasaadskjlhjlkdhlsdjkahj-3.png}}
 
 #O MD5 do arquivo aparecerá no campo MD5:{{ljasdhasdkljhadskjhadsdasaadskjlhjlkdhlsdjkahj-4.png}}</pre>
-</div>
-<div created="20200110202451908" modified="20200113112534342" tags="" title="New Tiddler">
-<pre>
-&lt;style&gt;
-thead {color:green;}
-tbody {color:blue;}
-tfoot {color:red;}
-
-table, th, td {
-  border: 1px solid black;
-}
-&lt;/style&gt;
-&lt;table&gt;
-
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;IP&lt;/th&gt;&lt;th&gt;OS&lt;/th&gt;&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;$list filter=&quot;[tag[server]sort[title]]&quot;&gt;
-&lt;tr&gt;&lt;td&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/td&gt;&lt;td&gt;&lt;$view field=&quot;IP&quot;/&gt; &lt;/td&gt;&lt;td&gt;&lt;$view field=&quot;OS&quot;/&gt; &lt;/td&gt;&lt;/tr&gt;
-&lt;/$list&gt;
-&lt;/tbody&gt;
-&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
-&lt;/table&gt;</pre>
 </div>
 <div created="20160826193330618" modified="20200110201738222" tags="Formulario instalação instalacao lapcha" title="Novo Servidor">
 <pre>|! Nome:|&lt;$edit-text field=&quot;Server&quot; tiddler=&quot;tmpSetting&quot;/&gt;|
@@ -18865,6 +18840,31 @@ Salvar este arquivo como
 ```
 limpaBackUp.ps1
 ```</pre>
+</div>
+<div created="20200110202451908" modified="20200113112955156" tags="" title="Server List">
+<pre>
+&lt;style&gt;
+thead {color:green;}
+tbody {color:blue;}
+tfoot {color:red;}
+
+table, th, td {
+  border: 1px solid black;
+}
+&lt;/style&gt;
+&lt;table&gt;
+
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;IP&lt;/th&gt;&lt;th&gt;OS&lt;/th&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;$list filter=&quot;[tag[server]sort[title]]&quot;&gt;
+&lt;tr&gt;&lt;td&gt;&lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt;&lt;/td&gt;&lt;td&gt;&lt;$view field=&quot;IP&quot;/&gt; &lt;/td&gt;&lt;td&gt;&lt;$view field=&quot;OS&quot;/&gt; &lt;/td&gt;&lt;/tr&gt;
+&lt;/$list&gt;
+&lt;/tbody&gt;
+&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;
+&lt;/table&gt;</pre>
 </div>
 <div created="20151008201545744" modified="20160810131119514" tags="ssh chaves linux remoto senha [[linux cmd]]" title="SSH por troca de chaves">
 <pre>É necessário gerar uma chave privada e uma chave pública, com o seguinte comando:&lt;br&gt;
