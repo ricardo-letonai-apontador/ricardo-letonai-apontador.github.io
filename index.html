@@ -9624,7 +9624,7 @@ done
 <div created="20200107141225486" modified="20200107142002242" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200110193530939" modified="20200113112536109" title="$:/state/sidebar">
+<div created="20200110193530939" modified="20200113152737470" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20200107144648395" modified="20200107144648395" title="$:/state/tab--1963855381">
@@ -9645,7 +9645,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200113132156670" list="[[Lista de tarefas agendadas(Windows)]] [[Listar processos exaceto os de sistema(Windows)]] [[Comando: Findsrt]] [[Novo Servidor]]" modified="20200113151445705" title="$:/StoryList">
+<div created="20200113132156670" list="[[Listar processos exaceto os de sistema(Windows)]] [[Comando: Findsrt]] [[Novo Servidor]]" modified="20200113185553981" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9709,8 +9709,8 @@ done
 <div created="20200107182650844" modified="20200107192313917" title="$:/temp/password">
 <pre></pre>
 </div>
-<div created="20200109191928522" modified="20200113151442103" title="$:/temp/search">
-<pre></pre>
+<div created="20200109191928522" modified="20200113152739853" title="$:/temp/search">
+<pre>linux</pre>
 </div>
 <div created="20200107144639683" modified="20200107144646398" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -10117,14 +10117,10 @@ schtasks /FO CSV | findstr /V Micro | findstr /V TaskName
 ```
 </pre>
 </div>
-<div created="20200113151451468" modified="20200113151603889" tags="[[windows cmd]] cmd" title="Listar processos exaceto os de sistema(Windows)">
+<div created="20200113151451468" modified="20200113185648889" tags="[[windows cmd]] cmd" title="Listar processos exaceto os de sistema(Windows)">
 <pre>
 ```
-tasklist | findstr /V svchost | findstr /V find | findstr
- /V win | findstr /V csr | findstr /V services | findstr /V System | findstr /V
-lsass | findstr /V taskhost | findstr /V cmd | findstr /V jucheck | findstr /V r
-dpclip | findstr /V conhost | findstr /V RDP | findstr /V explorer | findstr /V
-spool
+tasklist | findstr /V svchost | findstr /V find | findstr /V win | findstr /V csr| findstr /V services | findstr /V System | findstr /V lsass | findstr /V taskhost | findstr /V cmd | findstr /V jucheck | findstr /V rdpclip | findstr /V conhost | findstr /V RDP | findstr /V explorer | findstr /V spool
 ```
 </pre>
 </div>
