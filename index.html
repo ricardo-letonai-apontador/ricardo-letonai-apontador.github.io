@@ -189,6 +189,8 @@ Error message and password prompt
 
 <li>$:/temp/info-plugin</li>
 
+<li>$:/temp/NewTagName</li>
+
 <li>$:/temp/password</li>
 
 <li>$:/temp/search</li>
@@ -218,6 +220,8 @@ Error message and password prompt
 <li>Compactar arquivos por mês</li>
 
 <li>Criação de usuário</li>
+
+<li>Draft of 'New Tiddler'</li>
 
 <li>du</li>
 
@@ -9621,7 +9625,7 @@ done
 <div created="20200107182648489" modified="20200113132509344" title="$:/state/encrypt">
 <pre>Wifi: MaplinkGlobal</pre>
 </div>
-<div created="20200107141225486" modified="20200107142002242" title="$:/state/showeditpreview">
+<div created="20200107141225486" modified="20200122142631408" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20200110193530939" modified="20200113152737470" title="$:/state/sidebar">
@@ -9633,8 +9637,8 @@ done
 <div created="20200107144818622" modified="20200107144821596" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
-<div created="20200107144616342" modified="20200109185225087" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20200107144616342" modified="20200122143114488" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div created="20200107144626706" modified="20200107184434032" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
@@ -9645,7 +9649,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200113132156670" list="[[Listar processos exaceto os de sistema(Windows)]] [[Comando: Findsrt]] [[Novo Servidor]]" modified="20200113185553981" title="$:/StoryList">
+<div created="20200122143111066" list="$:/ControlPanel [[Draft of 'New Tiddler']] [[Listar processos exaceto os de sistema(Windows)]] [[Comando: Findsrt]] [[Novo Servidor]]" modified="20200122143111066" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9701,10 +9705,13 @@ done
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
-            &quot;text&quot;: &quot;en-US&quot;
+            &quot;text&quot;: &quot;pt-BR&quot;
         }
     }
 }</pre>
+</div>
+<div created="20200122143036554" modified="20200122143036554" title="$:/temp/NewTagName">
+<pre></pre>
 </div>
 <div created="20200107182650844" modified="20200107192313917" title="$:/temp/password">
 <pre></pre>
@@ -9930,6 +9937,17 @@ cat usuarios | while read line; do U=`echo $line | cut -d: -f1`;C=`echo $line | 
 ```
 </pre>
 </div>
+<div created="20200122142355895" draft.of="New Tiddler" draft.title="Configure new maps versions" modified="20200122143049424" tags="maplink" title="Draft of 'New Tiddler'">
+<pre>
+Configuração de novos mapas no Kubernetes, Link Confluence:
+
+* [[Configure new maps versions|https://maplinkdev.atlassian.net/wiki/spaces/MLP/pages/690389020/Configure+new+maps+versions+-+Kubernetes]]
+
+
+```
+# kubectl cp prod-nfs-server-maps-657b58b484-2q7hw:/exports/maps $PWD/ 
+```</pre>
+</div>
 <div created="20160701150013456" modified="20161019181237961" tags="comando [[linux cmd]] cmd command linux disco espaço utilizado ocupado tamanho" title="du" type="">
 <pre>''du'': Exibe o tamanho de um ou mais arquivos ou diretórios:
 
@@ -10111,15 +10129,13 @@ exit
 </div>
 <div created="20200113152524936" modified="20200113152621214" tags="agenda cron [[windows cmd]] windows cmd" title="Lista de tarefas agendadas(Windows)">
 <pre>
-
 ```
 schtasks /FO CSV | findstr /V Micro | findstr /V TaskName
 ```
 </pre>
 </div>
 <div created="20200113151451468" modified="20200113185648889" tags="[[windows cmd]] cmd" title="Listar processos exaceto os de sistema(Windows)">
-<pre>
-```
+<pre>```
 tasklist | findstr /V svchost | findstr /V find | findstr /V win | findstr /V csr| findstr /V services | findstr /V System | findstr /V lsass | findstr /V taskhost | findstr /V cmd | findstr /V jucheck | findstr /V rdpclip | findstr /V conhost | findstr /V RDP | findstr /V explorer | findstr /V spool
 ```
 </pre>
@@ -18936,7 +18952,7 @@ Sobre o que a saída do comando:
 |{{tmpSetting!!Server}}|{{tmpSetting!!IP}}|{{tmpSetting!!OS}}|
 </pre>
 </div>
-<div created="20200110200004544" ip="192.1919191" modified="20200110200011872" os="Windows" server="TesteNome" title="tmpSetting">
+<div IP="dfd" OS="dsdfsdf" Server="dfdfs" created="20200110200004544" ip="192.1919191" modified="20200122142625773" os="Windows" server="TesteNome" title="tmpSetting">
 <pre></pre>
 </div>
 <div created="20160517135205259" modified="20160719134507660" tags="linux comando command user group grupo adm administração [[linux cmd]]" title="usermod">
