@@ -247,6 +247,8 @@ Error message and password prompt
 
 <li>Putty</li>
 
+<li>RSA Private Key</li>
+
 <li>RSA: Chave Publica</li>
 
 <li>Script para apagar arquivos antigos</li>
@@ -9626,8 +9628,8 @@ done
 <div created="20200107141225486" modified="20200122142631408" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20200110193530939" modified="20200113152737470" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20200110193530939" modified="20200123203238648" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20200107144648395" modified="20200107144648395" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
@@ -9647,7 +9649,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200122143111066" list="[[Configure new maps versions]] [[Listar processos exaceto os de sistema(Windows)]] [[Comando: Findsrt]] [[Novo Servidor]]" modified="20200122143111066" title="$:/StoryList">
+<div created="20200123201941317" list="[[RSA Private Key]] [[SSH por troca de chaves]] [[Configure new maps versions]] [[Listar processos exaceto os de sistema(Windows)]] [[Comando: Findsrt]] [[Novo Servidor]]" modified="20200123201941317" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9711,8 +9713,8 @@ done
 <div created="20200107182650844" modified="20200107192313917" title="$:/temp/password">
 <pre></pre>
 </div>
-<div created="20200109191928522" modified="20200113152739853" title="$:/temp/search">
-<pre>linux</pre>
+<div created="20200109191928522" modified="20200123201939421" title="$:/temp/search">
+<pre>troca</pre>
 </div>
 <div created="20200107144639683" modified="20200107144646398" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -9903,8 +9905,7 @@ m=&quot;Apr&quot; &amp;&amp; mkdir /tmp/$m &amp;&amp; find . -newermt &quot;$m 0
 ```</pre>
 </div>
 <div created="20200122142355895" modified="20200122143322733" tags="maplink" title="Configure new maps versions">
-<pre>
-Configuração de novos mapas no Kubernetes, Link Confluence:
+<pre>Configuração de novos mapas no Kubernetes, Link Confluence:
 
 * [[Configure new maps versions|https://maplinkdev.atlassian.net/wiki/spaces/MLP/pages/690389020/Configure+new+maps+versions+-+Kubernetes]]
 
@@ -10123,8 +10124,7 @@ exit
 ```</pre>
 </div>
 <div created="20200113152524936" modified="20200113152621214" tags="agenda cron [[windows cmd]] windows cmd" title="Lista de tarefas agendadas(Windows)">
-<pre>
-```
+<pre>```
 schtasks /FO CSV | findstr /V Micro | findstr /V TaskName
 ```
 </pre>
@@ -18816,6 +18816,46 @@ putty.exe -load &lt;profile&gt; &lt;ip&gt; -ssh -l &lt;usuário&gt; -pw &lt;senh
 ```
 </pre>
 </div>
+<div created="20200123203208409" modified="20200123203351869" tags="remoto chaves ssh rsa" title="RSA Private Key">
+<pre>Usuário: ricardo.letonai
+
+Protegida por senha.
+
+```
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABAsNh+N+A
+0fdgqSAC9mzdh2AAAAEAAAAAEAAAEXAAAAB3NzaC1yc2EAAAADAQABAAABAQDaoQKuFLk5
+72a0uvbJajNfWx02wj79rKfr7F+am7qKvSN7yCHhMnQuSt/EFRTfzIqmoxzfacpkagXEAL
+hLGT/71LpH+R3E5c6xQ20TTyuRAgeEOjm1OMuKrZt//xtufR/FsZj9iBg2tlANVa9SFhmq
+h4Rhxcu/57nkHWI0yjruMW2sdd9IdIgE1WMva9FhbsFMtBE8PMFlqYNAQz81CLQi5bzajP
+qJDV4r2WLfHR5f3SFpuvaOJ4g2bNO2biKV8w5e8yYGnOOkJkzTHo4DxiYGbDTdOXXrh8xx
+2frpddz/XmmxnBaMbw22DKzFBiZAqWC4YtsirDGuffir++9UPkMVAAAD0OPiZTQwL6CeSo
+xXc84lrSi/zEUXhQeFZ/abKHSeF1baP254zfGkQosUKsR+fqT5ZptxvwI8yOnCMcxGcEJ4
+DpJxuAN901852M9x3ZWJF30f+YELCG86GTAftN9r7sqYP2zpp/8fZlaJp277Bx7ccx/hDK
+SrQSWoD0nV/mr5rEFlR/rqmzvJZ65UroD6IEeQATC1DdCnkZYSxCPMLgx4r9+2gctlECAI
+T7/wux2gV18q4w0GdMNZeQaIb3W9VN3v/9kz9ZTpOkMvlsIFnWhHqjqot2x0KQpfwOr2sl
+WB81RTLbdvggJz99WvHbuGQ+0Ew7MIHU0EDj7xpDPgiQd8JWhgs5zWj9UAPXncjeJlJDu1
+6A9hCggqPh9YjQwBh+jWabLjir29HUkS18Nce6kOF12+2pNU/RSHm7OrTj8OoDnmy6nY2a
+T2CgNmvGwIwtmG0cVg8OpGq8LF80iYpm91v9TluC3bJ8Ma0idGxwds4xNwmJmgJ0kbbNfG
+cBvOdS/8RymTPkmSiv7WTwJ8+HqKkYACZMhubzyAH3smtEQ2I4/Hf3KG8oJ2AdYL3c4bKK
+46R2+jMdqvlUwrduAm2T5BD0x874gXFMhLj1xgYsfKX1TtB5KdrKtDRKBkqftLhbbgmpoK
+WFtUTTTFbW3w/P7KfjoRBsreRf6e3eRcFDC9QhHpVsVDSNNljcvKQX+2OIlGfN4VK8Qpth
+DMDh3kAgeZ53nIY5fnHGn4e85TN2FukzWwJPNp92NhEqMjTpvmlzaJr7+z85ynP4Dgzi0Q
+ACCcSNGFULotwpk2JxY1QD/8YvG9wc/cBSrKefFzNP9wlMhA+9wz500HS4zUJ0cExcpSUz
+zCUVAQQTjDc3CyZwMUFIjsQMlo5cnMyDvKAS2qoYp0BNKnv/Kuf3l/RWFJ6G33IaPcO0zR
+CWTb0xa4k+a9IQDJFDqLQ3vVDzzdRVnOpbFynW9CXwR8SGJg7b920oRPKEK0BNz0w+0Bc8
+lnhuZYbX6L1CTeETW5dpgqBLuZ6lE8GLfR3XtCqp+tlGqiVIczdmilyxr+kp1ybO09tuaA
+cyyltONNmhdZm6yK+NzMVtCoroQ+S4y+juJIX0Gd1JAZuAOgjEj2n4V0NJBtgHTolA5aih
+eTCogeJKWqkaMvfZL6S6DSe0NfdpTo+t49ifM4+Gv8ji/j4mxo/tJAsY7q9X6cziDaBwiH
+WevEtOOKgraKqE4Lgj8rX7QNynFhE+jUUoyjswFtFKUhZGo4G8wQ2l+ltiQ6naebvSNolJ
+TlxebXKHQStEO1EkesBDWNusq7Ytg=
+-----END OPENSSH PRIVATE KEY-----
+
+```
+
+
+</pre>
+</div>
 <div created="20200107144155381" encrypted="{&quot;iv&quot;:&quot;YPNhpJ0jYfbLbrQMq+9CRQ==&quot;,&quot;v&quot;:1,&quot;iter&quot;:10000,&quot;ks&quot;:128,&quot;ts&quot;:64,&quot;mode&quot;:&quot;ccm&quot;,&quot;adata&quot;:&quot;&quot;,&quot;cipher&quot;:&quot;aes&quot;,&quot;salt&quot;:&quot;3pxj273i9po=&quot;,&quot;ct&quot;:&quot;fbmbKYP0XByixoFqrPAS2p00BfeRci14mHQgAEHw+aSm8BrvWPbT6WYzA0g50lRWxXZriam0j52+ulngFY7ffe88fQ/YZxAxWq+9QtcrS/253b3ZAgW2iTodg+1giU5BUGTkfJ/B9yHF/mta7DcFLjFznri5E9/M86cimv19rJRwafSRmxgbVwYd4zsfoCaZebxNf9kSteE0zyMr6wLsPHxP5Yi/8boAsME3x9aDvPoBhful8BdpEL1oTmP128PUVbYKWWlldT/f55Sl9mSUembgUTpQ6oxqEsdVRs42/GFDxBC/FaLAHXCHqG3fLIx2F6JVVQeutRNGIwNkydu4OZ52PJYYY678sY4Rvw5tT8lT7BvVz6oWE7Oq+zLvBYaygBfoMN7ZmtfWS4ISvrDR/edGX5wViRg1i/pXatUU5APaK63gDASQvhJXbkMj7aCEolM806jeh+LbJneCNVQXVMehngbzXNwfFdHid+35OtFY6G8vm6d9TJs7G9ms/gE9unD//Dp2OJxnvgKCcTBH/OY95kKqIwVlCeDk31aEkCVO4hA1aY3Te30n6t6J87WclnA4GIvgh7etDlQFtQYTbfXs5TqOyenFTyColUy/JyG24/XwjadCLe4DeTf753d7b3G3DuBI6Ja5WhhatLPcYZeM/ZYk4mWR6rmaWroeZIDF0cjRlHNsVVZiYCrSbNHoiWc4klrIYrpYVmJGj09m74paL8tvvKtpBGWBOS0L9BS38JAoFSCyZYUUU/XiT3+o9qGK8LbpO7SnoDMVoHyYwNzfYjHfZYPOgqv0KNrhBr6DoMWgG4RzqNhrXEPN2mogvqyFZE/gTaLJQnEBaryV3swDJ63ZH01D6XIGD57YEjz4DOeK0JDA/Lo5y63q/5KcYZniSFFYXFkbHJo7BpXiIehBJrxhnVfu3t85hTQG8N8J5wcX36NYAg==&quot;}" modified="20200107144219901" tags="" title="RSA: Chave Publica">
 <pre>!This is an encrypted Tiddler</pre>
 </div>
@@ -18947,7 +18987,7 @@ Sobre o que a saída do comando:
 |{{tmpSetting!!Server}}|{{tmpSetting!!IP}}|{{tmpSetting!!OS}}|
 </pre>
 </div>
-<div IP="dfd" OS="dsdfsdf" Server="dfdfs" created="20200110200004544" ip="192.1919191" modified="20200122142625773" os="Windows" server="TesteNome" title="tmpSetting">
+<div created="20200110200004544" ip="dfd" modified="20200122142625773" os="dsdfsdf" server="dfdfs" title="tmpSetting">
 <pre></pre>
 </div>
 <div created="20160517135205259" modified="20160719134507660" tags="linux comando command user group grupo adm administração [[linux cmd]]" title="usermod">
