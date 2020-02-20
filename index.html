@@ -253,6 +253,8 @@ Error message and password prompt
 
 <li>Putty</li>
 
+<li>Renovação Certificado TeamPass</li>
+
 <li>RSA Private Key</li>
 
 <li>RSA: Chave Publica</li>
@@ -9660,7 +9662,7 @@ done
 <div created="20200107183834872" modified="20200107183834872" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div created="20200131185641134" list="[[WK: Radar]] [[Default Passwords]]" modified="20200131185732553" title="$:/StoryList">
+<div list="[[Renovação Certificado TeamPass]] [[WK: Radar]] [[Default Passwords]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9708,11 +9710,11 @@ done
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1440&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;900&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -18847,6 +18849,17 @@ putty.exe -load &lt;profile&gt; &lt;ip&gt; -ssh -l &lt;usuário&gt; -pw &lt;senh
 ```
 </pre>
 </div>
+<div created="20200220172429810" modified="20200220172501236" tags="password certificado instalacao" title="Renovação Certificado TeamPass">
+<pre>Hoje o DNS do nosso TeamPass aponta para um IP inválido 172.16.6.244 fazendo assim que o mesmo só fique acessível na rede do escritório ou via VPN, porém o mesmo tem um certificado válido Let's Encrypt que foi gerado com um IP público válido e o mesmo irá expirar em 01/03/2020
+
+Para fazer o renew do certificado, é só ir no Cloudflare &gt; Selecionar o domínio lbslocal.com &gt; Ir nas Zonas de DNS e alterar a entrada teampass.lbslocal.com para: 200.155.70.120 (Não ativar a CDN)
+
+Depois disso só rodar o &quot;certbot renew&quot; no host 172.16.6.244
+
+Depois de renovado o certificado, basta editar novamente a entrada no DNS e voltar para 172.16.6.244
+
+Att</pre>
+</div>
 <div created="20200123203208409" encrypted="{&quot;iv&quot;:&quot;h6L20FQA0APEj3+o77bpkQ==&quot;,&quot;v&quot;:1,&quot;iter&quot;:10000,&quot;ks&quot;:128,&quot;ts&quot;:64,&quot;mode&quot;:&quot;ccm&quot;,&quot;adata&quot;:&quot;&quot;,&quot;cipher&quot;:&quot;aes&quot;,&quot;salt&quot;:&quot;aORT0XHXPf0=&quot;,&quot;ct&quot;:&quot;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&quot;}" modified="20200123203351869" tags="remoto chaves ssh rsa" title="RSA Private Key">
 <pre>!This is an encrypted Tiddler</pre>
 </div>
@@ -19026,8 +19039,7 @@ Password
 <pre>!This is an encrypted Tiddler</pre>
 </div>
 <div created="20200131185947732" modified="20200131190951081" tags="wk radar" title="WK: Radar">
-<pre>
-```
+<pre>```
 Conectado em nossa VPN, vá até o seu Menu Iniciar -&gt; Executar (Se quiser use o atalho no teclado Tecla com a Bandeira do Windows + Letra R) e digite o seguinte comando:
 
 \\172.17.0.2\WKRadar\Setup\Instalador
